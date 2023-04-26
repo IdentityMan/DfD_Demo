@@ -1,12 +1,16 @@
 name: MSDO windows-latest
-on:
-      push:
-        branches: [ main ]
-      pull_request:
-        branches: [ main ]
-      workflow_dispatch:
 
-    jobs:
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+    
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
       sample:
 
         # MSDO runs on windows-latest and ubuntu-latest.
